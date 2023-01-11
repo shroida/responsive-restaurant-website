@@ -205,8 +205,8 @@ header .icons #menu-bars{
     color: var(--light-color);
     padding: 1rem 0;
 }
-.swiper-pagination{
-    color: var(--brown);
+.swiper-pagination-bullet-active{
+    background: var(--brown);
 }
 
 
