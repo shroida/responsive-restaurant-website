@@ -15,6 +15,7 @@
     outline: none; border:none;
     text-transform: capitalize;
     transition: all .2s linear;
+    
 }
 
 html{
@@ -22,10 +23,11 @@ html{
     overflow-x: hidden;
     scroll-padding-top: 5.5rem;
     scroll-behavior: smooth;
+    background-color: #fff;
 }
 
 section{
-    padding:0 9%;
+    padding:2rem 9%;
 }
 
 section:nth-child(even){
@@ -177,6 +179,10 @@ header .icons #menu-bars{
 /* end styling header */
 
 /* start CSS Home Section */
+#home .container{
+    padding: 1rem 0;
+    background-color: #FFF;
+}
 #home .container .dishes{
     display: flex;
     align-items: center;
@@ -192,11 +198,11 @@ header .icons #menu-bars{
 #home .container .dishes .image img{
     width: 100%;
 }
-#home .container .dishes .info h2{
+h2{
     font-size: 4rem;
     color: var(--brown);
 }
-#home .container .dishes .info h1{
+h1{
     font-size: 10rem;
     color: var(--light-color);
 }
@@ -209,13 +215,80 @@ header .icons #menu-bars{
     background: var(--brown);
 }
 
+/* start styling Dishes section */
+#dishess h1{
+    display: flex;
+    justify-content: center;
+    font-size: 7rem;
+}
+#dishess h2{
+    display: flex;
+    justify-content: center;
+}
+#dishess .cards{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 1rem;
+}
+.cards .card{
+    width: 28rem;
+    background-color: #fff;
+    padding: 2.78rem;
+    box-shadow: var(--box-shadow);
+    border-radius: 0.8rem;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    text-align: center;
+}
+.cards .card .fa-heart,
+.cards .card .fa-eye{
 
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    top: 1.5rem;
+    width: 4rem;
+    height: 4rem;
+    line-height: 4rem;
+    background: var(--light-color);
+    border-radius: 50%;
+    font-size: 2rem;
+    color: #fff;
 
+}
+.cards .card .fa-eye{
+    left: -15rem;
+}
+.cards .card .fa-heart{
+    right: -15rem;
+}
+.cards .card:hover .fa-heart{
+    right: 1rem;
+}
+.cards .card:hover .fa-eye{
+    left: 1rem;
+}
+.card img{
+    height: 18rem;
+    margin: 1rem 0;
+}
+.card h3{
+font-size: 2.2rem;
+color: var(--black);
+}
+.card .stars{
+font-size: 2.2rem;
+}
+.card .stars a{
+color: var(--brown);
+}
+.card span{
 
-
-
-
-
+    color: var(--black);
+    font-size: 1.5rem;
+    margin-right: 1rem;
+    }
 
 
 
@@ -269,9 +342,7 @@ header .icons #menu-bars{
         border-top: .1rem solid rgba(0,0,0,.2);
         border-bottom: .1rem solid rgba(0,0,0,.2);
         padding:1rem;
-        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-
-        
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);        
     }
 
     header .navbar.active{
