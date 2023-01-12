@@ -1,15 +1,18 @@
 let menu = document.querySelector('#menu-bars');
 let navbar = document.querySelector('.navbar');
-
+let dishes = document.querySelector('#dishess')
 menu.onclick = () => {
     menu.classList.toggle('fa-times');
     navbar.classList.toggle('active');
-
+    
+}
+dishes.onclick = () => {
+    dishes.classList.toggle("active")
+    menu.classList.remove('active');
 }
 window.onscroll = () => {
     menu.classList.remove('fa-times');
     navbar.classList.remove('active');
-
 }
 
 
@@ -35,4 +38,5 @@ var swiper = new Swiper(".container", {
         prevEl: ".swiper-button-prev",
         },
     loop:true
+    
   });
